@@ -1,6 +1,9 @@
-import 'dart:ui';
+// ignore_for_file: prefer_const_constructors
 
+import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:iands_app/AuthenticationPage.dart';
+import 'package:iands_app/SessionsPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +21,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: ""),
+      routes: <String, WidgetBuilder>{
+        "/welcome": (BuildContext context) => MyHomePage(title: ""),
+        "/authentication": (BuildContext context) => AuthenticationPage(),
+        "/sessions": (BuildContext context) => SessionsPage(),
+      },
     );
   }
 }
@@ -151,7 +159,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                         fontSize: 16
                                       ),
                                     ),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      setState(() {
+                                        Navigator.of(context).pushReplacementNamed("/authentication");
+                                      });
+                                    },
                                   ),
                                 ),
                               ),
@@ -170,7 +182,11 @@ class _MyHomePageState extends State<MyHomePage> {
                                         fontSize: 16
                                       ),
                                     ),
-                                    onPressed: () {},
+                                    onPressed: () {
+                                      setState(() {
+                                        Navigator.of(context).pushReplacementNamed("/authentication");
+                                      });
+                                    },
                                   ),
                                 ),
                               ),
