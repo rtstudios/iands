@@ -90,6 +90,9 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         child: Padding(
                           padding: const EdgeInsets.all(10),
                           child: TextField(
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                            ),
                             decoration: InputDecoration(
                               hintText: "Enter email address",
                               border: InputBorder.none,
@@ -115,6 +118,9 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                           padding: const EdgeInsets.all(10),
                           child: TextField(
                             obscureText: true,
+                            style: TextStyle(
+                              fontFamily: "Futura",
+                            ),
                             decoration: InputDecoration(
                               hintText: "Enter password",
                               border: InputBorder.none,
