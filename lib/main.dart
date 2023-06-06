@@ -3,7 +3,9 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:iands_app/AuthenticationPage.dart';
+import 'package:iands_app/EvaluatePage.dart';
 import 'package:iands_app/SessionsPage.dart';
+import 'package:iands_app/SchedulePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,6 +27,8 @@ class MyApp extends StatelessWidget {
         "/welcome": (BuildContext context) => MyHomePage(title: ""),
         "/authentication": (BuildContext context) => AuthenticationPage(),
         "/sessions": (BuildContext context) => SessionsPage(),
+        "/schedule": (BuildContext context) => SchedulePage(),
+        "/evaluate": (BuildContext context) => EvaluatePage(),
       },
     );
   }
